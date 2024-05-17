@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#202020",
+        background: "#141414",
         secondary: "#2b2b2b",
         primary: "#e6f2f2",
-        accent: "#9bdbde",
+        accent: "#ff7722",
         'dull-blue': '#84d5ed',
         'bright-blue': '#2b83e2',
         'dull-red': '#ff6666',
@@ -22,6 +22,7 @@ module.exports = {
         pbold: ["Poppins-Bold", "sans-serif"],
         pextrabold: ["Poppins-ExtraBold", "sans-serif"],
         pblack: ["Poppins-Black", "sans-serif"],
+        yatra: ["YatraOne-Regular"]
       },
     },
   },

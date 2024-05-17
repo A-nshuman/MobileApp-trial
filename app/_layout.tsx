@@ -3,6 +3,8 @@ import { Slot, SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
 import React, { useEffect } from 'react'
 
+SplashScreen.preventAutoHideAsync();
+
 export default function RootLayout() {
 
   const [fontsLoaded, error] = useFonts({
@@ -15,13 +17,16 @@ export default function RootLayout() {
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Thin": require("../assets/fonts/Poppins-Thin.ttf"),
+    "YatraOne-Regular": require("../assets/fonts/YatraOne-Regular.ttf")
   });
 
   useEffect(() => {
     if (error) throw error;
 
-    if (fontsLoaded) SplashScreen
+    if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error])
+
+  if(!fontsLoaded && !error) return null;
 
   return (
     <Stack>
